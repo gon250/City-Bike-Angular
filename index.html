@@ -1,0 +1,14 @@
+<!doctype html>
+<html ng-app="bikeApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+    <script src="bike.js"></script>
+  </head>
+  <body>
+    <div ng-controller="BikeController as bikeCtrl">
+       <ul>
+         <li ng-repeat="place in bikeCtrl.places">{{ place.id }}</li>
+       </ul>
+    </div>
+  </body>
+</html>

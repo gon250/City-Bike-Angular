@@ -1,5 +1,8 @@
+
+ Search: <input ng-model="query">
+
 <ul class="places">
-	<li ng-repeat="place in places">
+	<li ng-repeat="place in places | filter:query">
 	  <a href="#details/{{place.id}}">{{place.location.city}} - {{place.location.country}}</a>
 	</li>
 </ul>

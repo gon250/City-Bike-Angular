@@ -1,4 +1,5 @@
-var bikeApp = angular.module('bikeApp', [
+require(['angular', 'js/controllers','angularRoute'], function(angular){
+  var bikeApp = angular.module('bikeApp', [
   'ngRoute',
   'bikeControllers'
 ]);
@@ -18,3 +19,4 @@ bikeApp.config(['$routeProvider',
         redirectTo: '/'
       });
   }]);
+});

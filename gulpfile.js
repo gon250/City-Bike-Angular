@@ -1,10 +1,17 @@
 var gulp = require('gulp'),
-  connect = require('gulp-connect');
+  connect = require('gulp-connect'),
+  uglify = require('gulp-uglify');
  
 gulp.task('connect', function() {
   connect.server({
     livereload: true
   });
+});
+
+gulp.task('compress', function() {
+  gulp.src('js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'))
 });
  
 gulp.task('html', function () {

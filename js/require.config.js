@@ -3,7 +3,8 @@ requirejs.config({
     paths: {
         angular: '../bower_components/angular/angular',
         angularRoute: '../bower_components/angular-route/angular-route',
-        material: '../bower_components/bootstrap-material-design/js/material.min'
+        jquery: '../bower_components/jquery/dist/jquery.min',
+        bootstrap : "/bower_components/bootstrap/dist/js/bootstrap.min",
     },
     shim:{
         angularRoute:{
@@ -13,8 +14,12 @@ requirejs.config({
         angular:{
             exports: 'angular'
         },
-        material:{
-            exports: 'material'
-        }
+        jquery:{
+            exports: 'jquery'
+        },
+        bootstrap: { 
+            deps: ['jquery'], 
+            exports: 'bootstrap' 
+        },
     }
 });

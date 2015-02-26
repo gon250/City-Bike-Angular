@@ -10,7 +10,7 @@ define(['angular'], function(angular){
   bikeControllers.controller('DetailsCtrl', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
     $http.get('http://api.citybik.es/v2/networks/' + $routeParams.cityId).success(function(data){
-        $scope.details = data.network.company;
+        $scope.city = data.network;
       });
     }]);
   return bikeControllers;

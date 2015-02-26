@@ -2,7 +2,8 @@ requirejs.config({
     baseUrl: './',
     paths: {
         angular: '../bower_components/angular/angular',
-        angularRoute: '../bower_components/angular-route/angular-route'
+        angularRoute: '../bower_components/angular-route/angular-route',
+        material: '../bower_components/bootstrap-material-design/js/material.min'
     },
     shim:{
         angularRoute:{
@@ -11,6 +12,9 @@ requirejs.config({
         },
         angular:{
             exports: 'angular'
+        },
+        material:{
+            exports: 'material'
         }
     }
 });
